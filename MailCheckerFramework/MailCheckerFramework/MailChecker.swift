@@ -6,4 +6,13 @@ public struct MailChecker {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
+    
+    public static func getDomain(_ email: String) -> Result<String,Error>{
+        if Array(email).contains("@") {
+            let result = String(email.suffix(Array(email).firstIndex(of:"@")!))
+            return .success(result)
+        } else {
+            return .failure(Error.self as! Error)
+        }
+    }
 }
