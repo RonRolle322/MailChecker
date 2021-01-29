@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "MailChecker"
-spec.version      = "1.0.0"
+spec.version      = "1.0.1"
 spec.summary      = "Here is MailChecker."
 
 spec.description  = "A longer text for MailChecker."
